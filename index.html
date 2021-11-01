@@ -19,6 +19,11 @@
         Pete: 130
     }
 
+    let menu = {
+        width: 200,
+        height: 300,
+        title: "my menu"
+    }
     
     function isEmpty(obj) {
         for (let key in obj) {        
@@ -35,8 +40,20 @@
         return num;
     }
 
+    function multiplyNumeric(obj) {
+        for (let key in obj) {
+            if (typeof(obj[key]) == "number") {
+                obj[key] *= 2;
+            }
+            console.log(key + ": " + obj[key]);
+            
+        }
+    }
+
     console.log(sum(salaries));
     console.log(isEmpty(user)); 
+    multiplyNumeric(menu);
+
     
 
 </script>
